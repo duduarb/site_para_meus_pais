@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site Pessoal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="body">
+    <header>
+        <h1>Mudança de Faculdade</h1>
+        <button id="modeToggle" onclick="toggleMode()">Modo Noturno</button>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Página Principal</a></li>
+            <li><a href="#curso">Meu novo curso é bom?</a></li>
+            <li><a href="#pais" onclick="showPasswordPrompt()">Somente Pais</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Página principal -->
+        <section id="home">
+            <h2>Minha mudança de faculdade</h2>
+            <p>Texto: Eu mudei de faculdade porque... (explicação sobre a mudança, como te faz mais feliz, etc.)</p>
+        </section>
+
+        <!-- Meu novo curso -->
+        <section id="curso">
+            <h2>Meu novo curso é bom?</h2>
+            <p>Texto: Explicação sobre o novo curso, por que ele é mais interessante e como ele se alinha com seus objetivos.</p>
+        </section>
+
+        <!-- Somente Pais (Área restrita) -->
+        <section id="pais">
+            <h2>Área Restrita: Somente Pais</h2>
+            <div id="passwordPrompt" class="hidden">
+                <label for="password">Insira a senha:</label>
+                <input type="password" id="password" />
+                <button onclick="checkPassword()">Entrar</button>
+            </div>
+            <div id="parentOptions" class="hidden">
+                <button onclick="showParentContent('mae')">Sou sua mãe</button>
+                <button onclick="showParentContent('pai')">Sou seu pai</button>
+            </div>
+            <div id="parentContent" class="hidden">
+                <p id="parentText">Texto: (Aqui ficará o texto especial para seus pais)</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Meu Site Pessoal. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
